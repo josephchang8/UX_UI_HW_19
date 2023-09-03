@@ -31,6 +31,10 @@ header p {
   background-color: #e9d7bf;
   text-align: center;
 }
+.content p {
+  text-align: justify;
+  line-height: 1.4;
+}
 button {
   padding: 15px;
   background-color: #4a6167;
