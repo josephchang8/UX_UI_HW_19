@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>Joseph Chang</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
     <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header>
@@ -10,11 +12,33 @@
     </header>
     <section class="heroImg">
       <div class="content">
-        <img src="josephchangrmbg.PNG" width="213.6" height="286.2">
+        <img src="josephchangrmbg.PNG" width="350" height="469.95">
         <h1>Joseph Chang</h1>
         <p>🍵 Hi, I'm Joseph, a Southern California-based UX Designer who wants to bridge the gap between users and technology. With a passion for crafting intuitive user experiences, I am dedicated to creating interfaces that effortlessly guide users through every interaction. Much like a tanuki's serene nature, I strive to weave simplicity and comfort seamlessly, making every interaction a delightful stroll through familiar and comfortable paths.</p>
-        <button>My Resume</button>
+        <button id="openMod">View Resume</button>
+
+        <div class="overlay" id="overlay"></div>
+        <div class="modal" id="modal">
+          <img src="resumepage1.PNG">
+          <!--<img src="resumepage2.PNG">-->
+          <button id="closeMod">Close</button>
+        </div>
       </div>
+
+      <script>
+        //My Resume click
+        $("#openMod").click(function() {
+            $("#overlay").css("display", "block");
+            $("#modal").css("display", "block");
+        });
+
+        //Close click
+        $("#closeMod").click(function() {
+            $("#overlay").css("display", "none");
+            $("#modal").css("display", "none");
+        });
+      </script>
+
     </section>
     <h1 class="heading">My Skills</h1>
     <section class="flexContainer">
